@@ -1,0 +1,184 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #171c43;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background-color: #000430;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(56, 72, 247, 0.281);
+    width: 100%;
+    max-width: 600px;
+  }
+  .stats-container{
+    padding: 30px;
+    border-radius: 28px;
+    border: 2px solid #555cb1 ;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  #number{
+    width: 100px;
+    height: 100px;
+    background-color: #555cb1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #progreesbar{
+    width: 100%;
+    height: 10%;
+    background-color: #555cb1;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+  #progress{
+    width: 50%;
+    height: 10px;
+    background-color: aqua;
+    border-radius: 10px;
+    transition: all 0.3s ease ;
+  }
+  .detalis{
+    width: 100%;
+  }
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900; 
+    font-style: normal;
+  }
+  form{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px ;
+  }
+  input{
+    flex: 1;
+    padding: 16px;
+    background: #000430;
+    border: 1px solid #555cb1;
+    border-radius: 20px;
+    outline: none;
+    color: #fff;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #828dff;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555cb1;
+  }
+  
+ul li {
+    list-style-type: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    justify-content: space-between;
+    transition: background-color 0.3s
+  }
+  
+/* Updated styles for the task list
+ul li {
+  padding: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center; 
+  
+} */
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked{
+  color: #555cb1;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url(images/checked.png);
+
+}
+/* ul li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+} */
+
+ul li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+/* Style for the delete button icon */
+button.delete-task {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3096/3096673.png'); /* Example icon for delete */
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+}
+li span {
+  color: rgb(14, 21, 168);
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+li span:hover {
+  color: rgb(0, 128, 255);
+}
