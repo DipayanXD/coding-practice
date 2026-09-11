@@ -3,41 +3,20 @@
 $a = 45;
 $b = 30;
 $c = 60;
-$result1 = $a <=> $b;
-$result2 = $a <=> $c;
 
-echo "Comparing $a <=> $b => $result1<br>";
-echo "Comparing $a <=> $c => $result2<br>";
-$largest = $a;
-switch ($result1) {
-    case 1:
-        $largest = $a;
-        break;
+echo "Comparing $a <=> $b => " . ($a <=> $b) . "<br>";
+echo "Comparing $a <=> $c => " . ($a <=> $c) . "<br>";
 
-    case 0:
-        $largest = $a;
-        break;
+$max = $a;
 
-    case -1:
-        $largest = $b;
-        break;
-}
-$result3 = $largest <=> $c;
-
-switch ($result3) {
-    case -1:
-        $largest = $c;
-        break;
-
-    case 0:
-        $largest = $largest;
-        break;
-
-    case 1:
-        $largest = $largest;
-        break;
+switch ($max <=> $b) {
+    case -1: $max = $b; break;
 }
 
-echo "Largest number is: $largest";
+switch ($max <=> $c) {
+    case -1: $max = $c; break;
+}
+
+echo "Largest number is: $max";
 
 ?>
