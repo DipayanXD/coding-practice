@@ -1,35 +1,30 @@
 <?php
 
-$num1 = 10;
-$num2 = 5;
-
+$a = 10;
+$b = 5;
 $choice = 1;
+
 do {
     switch ($choice) {
-
         case 1:
-            $result = $num1 + $num2;
-            echo "Choice 1 (Add) -> Result: $result<br>";
+            echo "Choice 1 (Add) -> Result: " . ($a + $b) . "<br>";
             break;
 
         case 2:
-            $result = $num1 - $num2;
-            echo "Choice 2 (Subtract) -> Result: $result<br>";
+            echo "Choice 2 (Subtract) -> Result: " . ($a - $b) . "<br>";
             break;
 
         case 3:
-            $result = $num1 * $num2;
-            echo "Choice 3 (Multiply) -> Result: $result<br>";
+            echo "Choice 3 (Multiply) -> Result: " . ($a * $b) . "<br>";
             break;
 
         case 4:
-            $result = $num1 / $num2;
-            echo "Choice 4 (Divide) -> Result: $result<br>";
-            break;
+            echo "Choice 4 (Divide) -> Result: " . ($a / $b) . "<br>";
     }
-    $choice++;
 
+    $choice++;
 } while ($choice <= 4);
+
 echo "Program terminated";
 
 ?>

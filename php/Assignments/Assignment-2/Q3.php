@@ -1,37 +1,29 @@
 <?php
-$scores = [88, 45, 95, 72, 60, 91];
-$ascending = $scores;
-sort($ascending);
 
-echo "sort() (ascending): ";
-print_r($ascending);
+$s = [88,45,95,72,60,91];
 
-echo "<br><br>";
-$descending = $scores;
-rsort($descending);
+$a = $s;
+sort($a);
+echo "sort(): "; print_r($a);
 
-echo "rsort() (descending): ";
-print_r($descending);
+echo "<br>";
 
-echo "<br><br>";
-$products = [
-    "USB Cable" => 149,
-    "Mouse" => 549,
-    "Keyboard" => 899,
-    "Bag" => 799,
-    "Webcam" => 1299
-];
-$byPrice = $products;
-asort($byPrice);
+$a = $s;
+rsort($a);
+echo "rsort(): "; print_r($a);
 
-echo "asort() (by price, keys kept): ";
-print_r($byPrice);
+echo "<br>";
 
-echo "<br><br>";
-$byName = $products;
-ksort($byName);
+$p = ["Mouse"=>549,"Keyboard"=>899,"Cable"=>149,"Bag"=>799,"Webcam"=>1299];
 
-echo "ksort() (by product name): ";
-print_r($byName);
+$a = $p;
+asort($a);
+echo "asort(): "; print_r($a);
+
+echo "<br>";
+
+$a = $p;
+ksort($a);
+echo "ksort(): "; print_r($a);
 
 ?>
