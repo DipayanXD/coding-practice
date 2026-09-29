@@ -1,8 +1,8 @@
 class Order {
-    private String orderId;
-    private String customerName;
-    private double totalAmount;
-    private double discountPercent;
+    private final String orderId;
+    private final String customerName;
+    private final double totalAmount;
+    private final double discountPercent;
 
     Order() {
         this("0000", "Guest");
@@ -46,15 +46,15 @@ public class OrderDemo {
         order1.displayDetails();
 
         System.out.println("Order 2:");
-        Order order2 = new Order("ORD101", "Alice");
+        Order order2 = new Order("ORD101", "Oggy");
         order2.displayDetails();
 
         System.out.println("Order 3:");
-        Order order3 = new Order("ORD102", "Bob", 1500.0);
+        Order order3 = new Order("ORD102", "Jack", 1500.0);
         order3.displayDetails();
 
         System.out.println("Order 4:");
-        Order order4 = new Order("ORD103", "Charlie", 2000.0, 10.0);
+        Order order4 = new Order("ORD103", "Bob", 2000.0, 10.0);
         order4.displayDetails();
     }
 }
